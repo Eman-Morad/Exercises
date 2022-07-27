@@ -19,13 +19,23 @@ def Multiple_of_seven(num):
   else:
     return"" 
 
+def Multiple_of_eleven(num):
+  # Function returns Bong if the input is a numper multiple of eleven.
+  if(num % 11) == 0:
+    return "Bong"
+  else:
+    return"" 
+
 for x in range(1,101):
 
   mo3_text  = Multiple_of_three(x)
   mo5_text  = Multiple_of_five(x)
   mo7_text  = Multiple_of_seven(x)
+  mo11_text = Multiple_of_eleven(x)
   
-  if mo3_text or mo5_text or mo7_text :
+  if mo11_text :
+    print(mo11_text)  
+  elif mo3_text or mo5_text or mo7_text :
     print(mo3_text + mo5_text + mo7_text)
   else:
     print(x)
